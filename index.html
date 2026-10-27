@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painting Solutions - ઘર, ઓફિસ અને કોમર્શિયલ જગ્યા માટે પ્રોફેશનલ પેઇન્ટિંગ, વોલ ટેક્સચર, એક્સ્ટિરિયર અને ઇન્ટિરિયર પેઇન્ટિંગ સેવા.">
+  <meta name="theme-color" content="#075b43">
+  <title>Painting Solutions | રંગોથી નવી ઓળખ</title>
+  <style>
+    :root{
+      --green:#075b43;--green2:#0b7b50;--lime:#b9d83c;--yellow:#ffd43b;
+      --ink:#17231f;--muted:#66736d;--cream:#fbfaf5;--white:#fff;
+      --line:#e6ebe6;--shadow:0 18px 50px rgba(10,49,36,.12);--radius:22px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font-family:system-ui,-apple-system,"Noto Sans Gujarati","Shruti",sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1160px,92%);margin:auto}
+    .topbar{background:#063d2f;color:#eaf6ee;font-size:13px;padding:8px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .topbar a{font-weight:700}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:900;color:var(--green);font-size:20px;line-height:1.1}
+    .brand-mark{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(135deg,var(--lime),var(--yellow));font-size:27px;box-shadow:0 6px 18px #b9d83c44}
+    .brand small{display:block;font-size:10px;letter-spacing:4px;color:#607267;margin-top:5px}
+    .nav-links{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:700}
+    .nav-links a:hover{color:var(--green2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:999px;background:var(--green);color:white;font-weight:800;border:0;cursor:pointer;transition:.2s;box-shadow:0 8px 22px #075b4326}
+    .btn:hover{transform:translateY(-2px);background:#064532}
+    .btn.yellow{background:var(--yellow);color:#183128;box-shadow:none}
+    .btn.outline{background:transparent;border:1px solid #c9d8ce;color:var(--green);box-shadow:none}
+    .menu-btn{display:none;background:none;border:0;font-size:28px;color:var(--green);cursor:pointer}
+    .hero{position:relative;overflow:hidden;padding:76px 0 66px;background:radial-gradient(circle at 85% 10%,#e9f4c8 0,transparent 25%),linear-gradient(120deg,#fdfcf6 0%,#eff6e9 100%)}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;border:65px solid #d5e7a533;border-radius:50%;right:-180px;bottom:-250px}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:48px;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e8f2d6;color:var(--green);padding:7px 13px;border-radius:999px;font-size:13px;font-weight:800;margin-bottom:20px}
+    h1{font-size:clamp(38px,5vw,65px);line-height:1.18;letter-spacing:-1.5px;margin-bottom:20px}
+    h1 span{color:var(--green2);position:relative}
+    .hero p{font-size:17px;color:#5c6b63;max-width:590px;margin-bottom:27px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .trust-row{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;color:#52645a;font-size:13px;font-weight:700}
+    .trust-row span{display:flex;align-items:center;gap:7px}
+    .hero-art{min-height:440px;position:relative}
+    .hero-photo{position:absolute;inset:0 18px 25px 20px;border-radius:35px;overflow:hidden;box-shadow:var(--shadow);background:#dfe8db}
+    .hero-photo img{width:100%;height:100%;object-fit:cover}
+    .paint-swatch{position:absolute;left:-5px;bottom:0;background:white;padding:17px 19px;border-radius:18px;box-shadow:var(--shadow);max-width:240px}
+    .paint-swatch strong{display:block;color:var(--green);font-size:15px}
+    .swatches{display:flex;gap:7px;margin-top:10px}
+    .swatches i{width:28px;height:28px;border-radius:50%;border:2px solid white;box-shadow:0 0 0 1px #ddd}
+    .floating-note{position:absolute;right:0;top:25px;background:var(--yellow);padding:14px 18px;border-radius:16px;font-weight:900;transform:rotate(4deg);box-shadow:var(--shadow)}
+    .section{padding:82px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+    .section-kicker{color:var(--green2);font-weight:900;font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
+    h2{font-size:clamp(29px,3.7vw,43px);line-height:1.25;margin:9px 0 13px;letter-spacing:-.7px}
+    .section-head p{color:var(--muted)}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service-card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:27px;transition:.25s}
+    .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#c8dfce}
+    .service-icon{width:57px;height:57px;border-radius:17px;display:grid;place-items:center;background:#edf6e5;font-size:28px;margin-bottom:18px}
+    .service-card h3{font-size:20px;margin-bottom:8px}
+    .service-card p{color:var(--muted);font-size:14px;margin-bottom:16px}
+    .text-link{color:var(--green2);font-weight:900;font-size:14px}
+    .why{background:#073f31;color:white;position:relative;overflow:hidden}
+    .why:before{content:"";position:absolute;width:430px;height:430px;border:1px solid #ffffff1b;border-radius:50%;left:-220px;top:-220px}
+    .why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center;position:relative}
+    .why h2{color:white}.why .section-kicker{color:var(--yellow)}
+    .why-copy p{color:#c8ddd3;margin-bottom:24px}
+    .why-points{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .why-point{border:1px solid #ffffff20;background:#ffffff09;padding:20px;border-radius:18px}
+    .why-point b{display:block;font-size:17px;margin:8px 0 4px}
+    .why-point p{font-size:13px;color:#c8ddd3}
+    .point-icon{font-size:24px}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:step}
+    .process-card{background:white;border:1px solid var(--line);border-radius:20px;padding:25px 20px;position:relative}
+    .step-number{display:grid;place-items:center;width:43px;height:43px;border-radius:50%;background:var(--yellow);font-weight:950;color:#1d382d;margin-bottom:18px}
+    .process-card h3{font-size:18px;margin-bottom:7px}
+    .process-card p{font-size:14px;color:var(--muted)}
+    .gallery{background:#f0f5ec}
+    .gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:220px 220px;gap:15px}
+    .gallery-item{position:relative;border-radius:20px;overflow:hidden;background:#d9e4d8}
+    .gallery-item:first-child{grid-row:span 2}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .gallery-item:hover img{transform:scale(1.06)}
+    .gallery-label{position:absolute;bottom:12px;left:12px;background:#ffffffed;color:#17382b;padding:8px 13px;border-radius:999px;font-size:13px;font-weight:900}
+    .colors-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .color-card{background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden;text-align:center;padding-bottom:12px;font-size:13px;font-weight:800}
+    .color-box{height:100px;margin-bottom:10px}
+    .quote{padding:0 0 82px}
+    .quote-box{border-radius:30px;padding:45px;background:linear-gradient(115deg,#d9ecae,#f9e89c);display:flex;justify-content:space-between;align-items:center;gap:25px}
+    .quote-box h2{max-width:670px;margin-top:0}
+    .quote-box p{color:#52634c}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:start}
+    .contact-info{background:#073f31;color:white;border-radius:25px;padding:30px}
+    .contact-info h3{font-size:25px;margin-bottom:10px}
+    .contact-info p{color:#c8ddd3;margin-bottom:22px}
+    .contact-line{display:flex;gap:13px;align-items:center;padding:14px 0;border-bottom:1px solid #ffffff20}
+    .contact-line:last-child{border-bottom:0}
+    .contact-line .symbol{font-size:22px}
+    .contact-line small{display:block;color:#c8ddd3}
+    .contact-form{background:white;border:1px solid var(--line);border-radius:25px;padding:30px;box-shadow:0 10px 35px #183d2a0b}
+    .contact-form h3{font-size:25px;margin-bottom:5px}
+    .contact-form>p{color:var(--muted);font-size:14px;margin-bottom:20px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .field.full{grid-column:1/-1}
+    label{font-size:13px;font-weight:800}
+    input,select,textarea{font:inherit;width:100%;padding:12px 13px;border:1px solid #dce5de;border-radius:12px;background:#fcfdfb;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:var(--green2);box-shadow:0 0 0 3px #0b7b5014}
+    textarea{resize:vertical;min-height:100px}
+    .form-note{font-size:12px;color:var(--muted);margin-top:12px}
+    footer{background:#042c22;color:#d5e7dd;padding:35px 0 20px}
+    .footer-top{display:flex;justify-content:space-between;align-items:center;gap:25px;padding-bottom:25px;border-bottom:1px solid #ffffff20}
+    footer .brand{color:white}footer .brand small{color:#b3c9bd}
+    .footer-links{display:flex;gap:17px;flex-wrap:wrap;font-size:13px}
+    .copyright{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:18px;font-size:12px;color:#a9c1b4}
+    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:30;background:#20bd65;color:white;width:58px;height:58px;display:grid;place-items:center;border-radius:50%;font-size:28px;box-shadow:0 10px 30px #0003}
+    @media(max-width:900px){
+      .nav-links{gap:13px}.nav-links a:not(.btn){display:none}
+      .hero-grid,.why-grid,.contact-grid{grid-template-columns:1fr}
+      .hero{padding-top:50px}.hero-art{min-height:390px}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .process-grid{grid-template-columns:repeat(2,1fr)}
+      .why-grid{gap:30px}.gallery-grid{grid-template-rows:180px 180px}
+      .colors-grid{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(max-width:560px){
+      .topbar .container{justify-content:center;text-align:center}
+      .nav{min-height:68px}.brand{font-size:17px}.brand-mark{width:42px;height:42px}
+      .nav-links .btn{padding:10px 13px;font-size:12px}.nav-links{gap:8px}
+      h1{font-size:39px}.hero p{font-size:15px}.hero-art{min-height:300px}
+      .hero-photo{inset:0 7px 18px 8px;border-radius:24px}.floating-note{font-size:12px;top:8px}
+      .paint-swatch{padding:12px;max-width:210px}.section{padding:60px 0}
+      .services-grid,.process-grid{grid-template-columns:1fr}
+      .service-card{padding:23px}.why-points{grid-template-columns:1fr 1fr}
+      .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:190px 150px 150px}
+      .gallery-item:first-child{grid-column:span 2;grid-row:auto}
+      .colors-grid{grid-template-columns:repeat(2,1fr)}
+      .quote-box{padding:27px;align-items:flex-start;flex-direction:column}
+      .contact-form,.contact-info{padding:23px}.form-grid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}.footer-top{align-items:flex-start;flex-direction:column}
+      .copyright{flex-direction:column}.whatsapp-float{right:14px;bottom:14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>🎨 તમારા સપનાના ઘરને આપો રંગોની નવી ઓળખ</span>
+      <span>📞 <a href="tel:9375510374">93755 10374</a> &nbsp; | &nbsp; <a href="tel:9426545035">94265 45035</a></span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Painting Solutions હોમ">
+        <span class="brand-mark">🏠</span>
+        <span>PAINTING <small>SOLUTIONS</small></span>
+      </a>
+      <nav class="nav-links" aria-label="મુખ્ય મેનુ">
+        <a href="#home">હોમ</a><a href="#services">અમારી સેવાઓ</a><a href="#gallery">ગેલેરી</a><a href="#colors">કલર પસંદગી</a>
+        <a class="btn" href="#contact">અંદાજ મેળવો ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">✦ વિશ્વાસભર્યું કામ • સુંદર ફિનિશિંગ</div>
+          <h1>રંગોથી બદલો<br>તમારા ઘરની <span>ઓળખ!</span></h1>
+          <p>ઘર હોય, ઓફિસ હોય કે દુકાન — યોગ્ય રંગો અને સુંદર પેઇન્ટિંગથી દરેક જગ્યા બની શકે ખાસ. ગુણવત્તા, સફાઈ અને સમયસર કામ એ જ અમારી ઓળખ.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">મફત અંદાજ માટે પૂછો <span>↗</span></a>
+            <a class="btn outline" href="https://wa.me/919375510374?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%AB%8D%E0%AA%A4%E0%AB%87%2C%20મારે%20પેઇન્ટિંગ%20માટે%20અંદાજ%20જોઈએ%20છે." target="_blank" rel="noopener">WhatsApp કરો</a>
+          </div>
+          <div class="trust-row">
+            <span>✓ ગુણવત્તાયુક્ત ફિનિશિંગ</span><span>✓ સ્વચ્છ કામ</span><span>✓ સમયનું પાલન</span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-photo">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="સુંદર રંગો અને આધુનિક ઇન્ટિરિયર ધરાવતું ઘર" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#dce8d0,#a9c6b1)'">
+          </div>
+          <div class="floating-note">તમારી જગ્યા<br>તમારી પસંદના રંગો ✨</div>
+          <div class="paint-swatch"><strong>તમારા રંગો, તમારી ઓળખ</strong><span style="font-size:12px;color:#64736a">દરેક દિવાલમાં નવી તાજગી</span><div class="swatches"><i style="background:#e8d6b3"></i><i style="background:#9fc4a8"></i><i style="background:#e5b74c"></i><i style="background:#c96e53"></i><i style="background:#547d8b"></i></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">અમારી સેવાઓ</span>
+          <h2>દરેક દિવાલ માટે યોગ્ય ઉકેલ</h2>
+          <p>તમારી જરૂરિયાત પ્રમાણે પેઇન્ટિંગ અને વોલ ડેકોરેશનની વિવિધ સેવાઓ. કામ શરૂ કરતા પહેલાં ચર્ચા અને અંદાજ.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card"><div class="service-icon">🛋️</div><h3>ઘરની અંદરનું પેઇન્ટિંગ</h3><p>બેડરૂમ, હોલ, રસોડું અને આખા ઘરને આપો સુંદર, તાજો અને મનપસંદ લુક.</p><a class="text-link" href="#contact">આ સેવા વિશે પૂછો →</a></article>
+          <article class="service-card"><div class="service-icon">🏡</div><h3>બહારની દિવાલનું પેઇન્ટિંગ</h3><p>ઘરની બહારની દિવાલો માટે આકર્ષક રંગો અને હવામાનને અનુરૂપ પેઇન્ટિંગ.</p><a class="text-link" href="#contact">આ સેવા વિશે પૂછો →</a></article>
+          <article class="service-card"><div class="service-icon">🖌️</div><h3>વોલ ટેક્સચર અને ડિઝાઇન</h3><p>ફીચર વોલ, ટેક્સચર ફિનિશ અને પસંદગી મુજબની ડેકોરેટિવ દિવાલો.</p><a class="text-link" href="#contact">આ સેવા વિશે પૂછો →</a></article>
+          <article class="service-card"><div class="service-icon">🎨</div><h3>કલર કોમ્બિનેશન</h3><p>ફર્નિચર, લાઇટિંગ અને જગ્યાને અનુરૂપ રંગો પસંદ કરવામાં માર્ગદર્શન.</p><a class="text-link" href="#contact">આ સેવા વિશે પૂછો →</a></article>
+          <article class="service-card"><div class="service-icon">💧</div><h3>વોટરપ્રૂફિંગ</h3><p>ભેજ અને પાણીના પ્રવેશની સમસ્યા માટે યોગ્ય ઉકેલ અંગે સ્થળની તપાસ બાદ માર્ગદર્શન.</p><a class="text-link" href="#contact">આ સેવા વિશે પૂછો →</a></article>
+          <article class="service-card"><div class="service-icon">🏢</div><h3>ઓફિસ અને કોમર્શિયલ પેઇન્ટિંગ</h3><p>ઓફિસ, દુકાન, બિલ્ડિંગ અને અન્ય કોમર્શિયલ જગ્યાઓ માટે વ્યવસ્થિત કામ.</p><a class="text-link" href="#contact">આ સેવા વિશે પૂછો →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why">
+      <div class="container why-grid">
+        <div class="why-copy">
+          <span class="section-kicker">અમને કેમ પસંદ કરો?</span>
+          <h2>સુંદર રંગો સાથે વિશ્વાસનું કામ</h2>
+          <p>અમારો હેતુ માત્ર રંગ લગાવવાનો નથી; તમારી જગ્યાને સુંદર બનાવવાનો અને કામ દરમિયાન શક્ય તેટલી સ્વચ્છતા જાળવવાનો છે.</p>
+          <a class="btn yellow" href="#contact">તમારા કામની ચર્ચા કરો ↗</a>
+        </div>
+        <div class="why-points">
+          <div class="why-point"><span class="point-icon">🛡️</span><b>ગુણવત્તાયુક્ત ફિનિશ</b><p>સપાટી તૈયાર કરવાથી લઈને અંતિમ ફિનિશ સુધી કાળજી.</p></div>
+          <div class="why-point"><span class="point-icon">👷</span><b>અનુભવી ટીમ</b><p>કામની જરૂરિયાત મુજબ યોગ્ય આયોજન અને અમલ.</p></div>
+          <div class="why-point"><span class="point-icon">🧹</span><b>સ્વચ્છતા પર ધ્યાન</b><p>ફર્નિચર અને આસપાસની જગ્યા સુરક્ષિત રાખવાની કાળજી.</p></div>
+          <div class="why-point"><span class="point-icon">⏱️</span><b>સમયનું આયોજન</b><p>કામ શરૂ કરતા પહેલાં સમય અને પ્રક્રિયા અંગે ચર્ચા.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><span class="section-kicker">અમારી કાર્યપદ્ધતિ</span><h2>પેઇન્ટિંગની શરૂઆતથી પૂર્ણતા સુધી</h2><p>સરળ અને સ્પષ્ટ પ્રક્રિયા — જેથી તમને દરેક તબક્કે માહિતી રહે.</p></div>
+        <div class="process-grid">
+          <div class="process-card"><div class="step-number">01</div><h3>તમારી જરૂરિયાત જાણીએ</h3><p>જગ્યા, પસંદગીના રંગો અને કામની વિગતો સમજીએ.</p></div>
+          <div class="process-card"><div class="step-number">02</div><h3>સ્થળની તપાસ અને અંદાજ</h3><p>કામની સ્થિતિ અને વિસ્તાર મુજબ ખર્ચનો અંદાજ ચર્ચીએ.</p></div>
+          <div class="process-card"><div class="step-number">03</div><h3>સપાટી અને રંગની તૈયારી</h3><p>જરૂર મુજબ તૈયારી, પ્રાઇમર અને રંગનું આયોજન કરીએ.</p></div>
+          <div class="process-card"><div class="step-number">04</div><h3>ફિનિશિંગ અને તપાસ</h3><p>કામ પૂર્ણ થયા પછી ફિનિશિંગની તપાસ અને હેન્ડઓવર.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-head"><span class="section-kicker">રંગોની પ્રેરણા</span><h2>તમારી જગ્યા માટે નવા વિચારો</h2><p>આ ફોટા ડિઝાઇનની પ્રેરણા માટે છે. તમારી સાઇટ પર તમારા પોતાના કામના ફોટા ઉમેરશો તો વધુ વિશ્વાસ ઊભો થશે.</p></div>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="આધુનિક લિવિંગ રૂમ" loading="lazy"><span class="gallery-label">આધુનિક લિવિંગ રૂમ</span></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="સુંદર ઇન્ટિરિયર ડિઝાઇન" loading="lazy"><span class="gallery-label">ઇન્ટિરિયર ડિઝાઇન</span></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="ઘરની આધુનિક સજાવટ" loading="lazy"><span class="gallery-label">ઘરની સજાવટ</span></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="ઘરનું સુંદર ઇન્ટિરિયર" loading="lazy"><span class="gallery-label">સુંદર ઘર</span></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=80" alt="લાઇટ કલરવાળું ઘર" loading="lazy"><span class="gallery-label">શાંત રંગો</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="colors">
+      <div class="container">
+        <div class="section-head"><span class="section-kicker">કલર પસંદગી</span><h2>કયો રંગ તમારી જગ્યા માટે યોગ્ય?</h2><p>રંગની પસંદગી રૂમના કદ, કુદરતી પ્રકાશ, ફર્નિચર અને તમારી પસંદ પર આધારિત છે.</p></div>
+        <div class="colors-grid">
+          <div class="color-card"><div class="color-box" style="background:#f2eadb"></div>વોર્મ વ્હાઇટ</div>
+          <div class="color-card"><div class="color-box" style="background:#d7e5cf"></div>સેજ ગ્રીન</div>
+          <div class="color-card"><div class="color-box" style="background:#d9e7ed"></div>સ્કાય બ્લૂ</div>
+          <div class="color-card"><div class="color-box" style="background:#e7c9b3"></div>પીચ</div>
+          <div class="color-card"><div class="color-box" style="background:#e8d77b"></div>સોફ્ટ યલો</div>
+          <div class="color-card"><div class="color-box" style="background:#c9c4bd"></div>ન્યુટ્રલ ગ્રે</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="container">
+        <div class="quote-box">
+          <div><h2>“નવો રંગ, નવો અહેસાસ — તમારા ઘરને આપો નવી ઓળખ!”</h2><p>તમારી જગ્યા વિશે જણાવો. યોગ્ય સેવા અને અંદાજ અંગે વાત કરીએ.</p></div>
+          <a class="btn" href="https://wa.me/919375510374?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%AB%8D%E0%AA%A4%E0%AB%87%2C%20મારે%20પેઇન્ટિંગ%20માટે%20અંદાજ%20જોઈએ%20છે." target="_blank" rel="noopener">હમણાં સંપર્ક કરો ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head"><span class="section-kicker">સંપર્ક કરો</span><h2>તમારા પેઇન્ટિંગ કામની શરૂઆત અહીંથી</h2><p>ફોર્મ ભરો અથવા સીધો ફોન / WhatsApp કરો. ફોર્મ મોકલતાં WhatsAppમાં તમારી વિગતો તૈયાર થશે.</p></div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Painting Solutions</h3><p>તમારા ઘર, ઓફિસ કે કોમર્શિયલ જગ્યા માટે રંગોની યોગ્ય પસંદગી અને પેઇન્ટિંગ અંગે વાત કરવા અમારો સંપર્ક કરો.</p>
+            <div class="contact-line"><span class="symbol">📞</span><div><small>ફોન નંબર 1</small><a href="tel:9375510374"><strong>93755 10374</strong></a></div></div>
+            <div class="contact-line"><span class="symbol">📞</span><div><small>ફોન નંબર 2</small><a href="tel:9426545035"><strong>94265 45035</strong></a></div></div>
+            <div class="contact-line"><span class="symbol">💬</span><div><small>ઝડપી પૂછપરછ</small><a href="https://wa.me/919375510374" target="_blank" rel="noopener"><strong>WhatsApp પર મેસેજ કરો</strong></a></div></div>
+            <div class="contact-line"><span class="symbol">🎨</span><div><small>અમારી સેવાઓ</small><strong>ઘર • ઓફિસ • દુકાન • બિલ્ડિંગ</strong></div></div>
+          </div>
+          <form class="contact-form" id="enquiryForm">
+            <h3>મફત અંદાજ માટે પૂછપરછ</h3><p>તમારી વિગતો ભરો — WhatsAppમાં મેસેજ ખુલશે.</p>
+            <div class="form-grid">
+              <div class="field"><label for="name">તમારું નામ *</label><input id="name" name="name" required placeholder="તમારું નામ"></div>
+              <div class="field"><label for="phone">મોબાઇલ નંબર *</label><input id="phone" name="phone" required inputmode="tel" pattern="[0-9+\-\s]{10,15}" placeholder="મોબાઇલ નંબર"></div>
+              <div class="field"><label for="service">કઈ સેવા જોઈએ? *</label><select id="service" name="service" required><option value="">સેવા પસંદ કરો</option><option>ઘરની અંદરનું પેઇન્ટિંગ</option><option>બહારની દિવાલનું પેઇન્ટિંગ</option><option>વોલ ટેક્સચર / ડિઝાઇન</option><option>વોટરપ્રૂફિંગ</option><option>ઓફિસ / કોમર્શિયલ પેઇન્ટિંગ</option><option>કલર કોમ્બિનેશન</option><option>અન્ય</option></select></div>
+              <div class="field"><label for="area">વિસ્તાર / શહેર</label><input id="area" name="area" placeholder="તમારો વિસ્તાર"></div>
+              <div class="field full"><label for="details">વધુ વિગતો</label><textarea id="details" name="details" placeholder="કેટલા રૂમ / કેટલો વિસ્તાર / તમારી જરૂરિયાત..."></textarea></div>
+              <div class="field full"><button class="btn" type="submit">WhatsApp પર પૂછપરછ મોકલો ↗</button></div>
+            </div>
+            <p class="form-note">નોંધ: આ ફોર્મ વેબસાઇટના સર્વર પર માહિતી સંગ્રહતું નથી; તે WhatsApp મેસેજ તૈયાર કરે છે.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand" href="#home"><span class="brand-mark">🏠</span><span>PAINTING <small>SOLUTIONS</small></span></a>
+        <div class="footer-links"><a href="#services">અમારી સેવાઓ</a><a href="#gallery">ગેલેરી</a><a href="#colors">કલર પસંદગી</a><a href="#contact">સંપર્ક</a></div>
+      </div>
+      <div class="copyright"><span>© <span id="year"></span> Painting Solutions. સર્વાધિકાર સુરક્ષિત.</span><span>“રંગોથી સુંદરતા, કામથી વિશ્વાસ.”</span></div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/919375510374?text=%E0%AA%A8%E0%AA%AE%E0%AA%B8%E0%AB%8D%E0%AA%A4%E0%AB%87%2C%20મારે%20પેઇન્ટિંગ%20માટે%20માહિતી%20જોઈએ%20છે." target="_blank" rel="noopener" aria-label="WhatsApp પર સંપર્ક કરો">☏</a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('enquiryForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const area = document.getElementById('area').value.trim();
+      const details = document.getElementById('details').value.trim();
+      if (!name || !phone || !service) {
+        alert('કૃપા કરીને નામ, મોબાઇલ નંબર અને સેવા પસંદ કરો.');
+        return;
+      }
+      const message = `નમસ્તે Painting Solutions,%0Aમારે પેઇન્ટિંગ માટે અંદાજ જોઈએ છે.%0Aનામ: ${encodeURIComponent(name)}%0Aમોબાઇલ: ${encodeURIComponent(phone)}%0Aસેવા: ${encodeURIComponent(service)}%0Aવિસ્તાર: ${encodeURIComponent(area || 'ઉલ્લેખ નથી')}%0Aવધુ વિગતો: ${encodeURIComponent(details || 'ઉલ્લેખ નથી')}`;
+      window.open('https://wa.me/919375510374?text=' + message, '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
